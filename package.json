@@ -1,0 +1,32 @@
+{
+  "name": "ketchup-notifications",
+  "version": "0.0.1",
+  "description": "Vuex based notifications library for Vue2",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wingleungchoi/ketchupNotifications.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "notifications",
+    "js"
+  ],
+  "author": "wing leung CHOI <wingleungchoi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wingleungchoi/ketchupNotifications/issues"
+  },
+  "homepage": "https://github.com/wingleungchoi/ketchupNotifications#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^3.5.4"
+  }
+}
