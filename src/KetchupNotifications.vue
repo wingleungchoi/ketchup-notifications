@@ -18,7 +18,7 @@ export default Vue.extend({
       notifications: NotificationStore.state
     }
   },
-	computed () {
+	computed: {
 		notifications () {
 			return this.$store.getters.ketchupNotifications
 		}
