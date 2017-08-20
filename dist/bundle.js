@@ -8173,7 +8173,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _vue = __webpack_require__(4);
@@ -8195,25 +8195,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 
 exports.default = _vue2.default.extend({
-  components: {
-    notification: _notification2.default
-  },
-  data: function data() {
-    return {
-      notifications: NotificationStore.state
-    };
-  },
-
-  computed: {
-    notifications: function notifications() {
-      return this.$store.getters.ketchupNotifications;
-    }
-  },
-  methods: {
-    removeNotification: function removeNotification(notification) {
-      NotificationStore.removeNotification(notification);
-    }
-  }
+	components: {
+		notification: _notification2.default
+	},
+	computed: {
+		notifications: function notifications() {
+			return this.$store.getters.ketchupNotifications;
+		}
+	}
 });
 
 /***/ }),
@@ -8629,6 +8618,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "notifications"
   }, _vm._l((_vm.notifications), function(notification) {
     return _c('notification', {
+      key: notification.id,
       attrs: {
         "notification": notification
       }

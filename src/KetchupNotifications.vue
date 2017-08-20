@@ -1,6 +1,6 @@
 <template>
   <div class="notifications">
-    <notification v-for="notification in notifications" :notification="notification">
+    <notification v-for="notification in notifications" :notification="notification" :key="notification.id">
     </notification>
   </div>
 </template>
@@ -13,21 +13,11 @@ export default Vue.extend({
   components: {
     notification: Notification
   },
-  data () {
-    return {
-      notifications: NotificationStore.state
-    }
-  },
 	computed: {
 		notifications () {
 			return this.$store.getters.ketchupNotifications
 		}
-	},
-  methods: {
-    removeNotification: function (notification) {
-      NotificationStore.removeNotification(notification)
-    }
-  }
+	}
 })
 </script>
 
