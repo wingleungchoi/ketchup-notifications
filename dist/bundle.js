@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define("ketchup-notifications", [], factory);
+	else if(typeof exports === 'object')
+		exports["ketchup-notifications"] = factory();
+	else
+		root["ketchup-notifications"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -8638,3 +8648,4 @@ if (false) {
 
 /***/ })
 /******/ ]);
+});

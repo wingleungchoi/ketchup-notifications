@@ -4,6 +4,9 @@ module.exports = {
   entry: ['./src/index'], // file extension after index is optional for .js files
   output: {
     path: path.join(__dirname, 'dist'),
+    library: 'ketchup-notifications',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
     filename: 'bundle.js'
   },
   module: {

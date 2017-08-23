@@ -1,6 +1,6 @@
 {
   "name": "ketchup-notifications",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Vuex based notifications library for Vue2",
   "main": "./dist/bundle.js",
   "scripts": {
