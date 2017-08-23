@@ -4,6 +4,7 @@
   "description": "Vuex based notifications library for Vue2",
   "main": "./dist/bundle.js",
   "scripts": {
+    "prepublish": "npm webpack",
     "dev": "node ./src/test.js",
     "webpack": "webpack",
     "test": "mocha --reporter spec"
@@ -37,5 +38,9 @@
     "vuex": "^2.3.1",
     "webpack": "^3.5.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^2.0.0",
+    "vuex": "^2.0.0"
+  }
 }
