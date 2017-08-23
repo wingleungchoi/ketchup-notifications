@@ -1,5 +1,4 @@
 import KetchupNotifications from './KetchupNotifications.vue'
-import { update } from './utils'
 
 export function createComponent() {
   return KetchupNotifications

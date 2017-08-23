@@ -13,21 +13,11 @@ export default Vue.extend({
   components: {
     notification: Notification
   },
-  data () {
-    return {
-      notifications: NotificationStore.state
-    }
-  },
 	computed () {
 		notifications () {
 			return this.$store.getters.ketchupNotifications
 		}
-	},
-  methods: {
-    removeNotification: function (notification) {
-      NotificationStore.removeNotification(notification)
-    }
-  }
+	}
 })
 </script>
 

@@ -2,7 +2,7 @@
   "name": "ketchup-notifications",
   "version": "0.0.1",
   "description": "Vuex based notifications library for Vue2",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },
@@ -31,5 +31,9 @@
     "vue-loader": "^13.0.4",
     "vuex": "^2.3.1",
     "webpack": "^3.5.4"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0",
+    "vuex": "^2.0.0"
   }
 }
