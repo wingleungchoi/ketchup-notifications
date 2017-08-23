@@ -20,19 +20,19 @@ function createNotification(id, text, type, timeout, dismissAfter) {
   }
 }
 
-export function createModule(options: KetchupOptions = {}) {
+export function createModule(options = {}) {
   const {
     dismissInterval = 3000
   } = options
 
   let maxKetchupId = 0
 
-  const state: KetchupState = {
+  const state = {
     notifications: []
   }
 
   const getters = {
-    ketchupNotifications: (state: KetchupState) => state.notifications
+    ketchupNotifications: (state) => state.notifications
   }
 
   const actions = {
@@ -50,11 +50,11 @@ export function createModule(options: KetchupOptions = {}) {
   }
 
   const mutations = {
-    [ADD] (state: KetchupState, data: KetchupNotification) {
+    [ADD] (state, data) {
       state.notifications.push(data)
     },
 
-    [REMOVE] (state: KetchupState, notification) {
+    [REMOVE] (state, notification) {
       state.notifications = state.notifications.filter(n => n.id !== notification.id)
     }
   }

@@ -1,11 +1,12 @@
 <template>
   <div class="notifications">
-    <notification v-for="notification in notifications" :notification="notification">
+    <notification v-for="notification in notifications" :notification="notification" :key="notification.id">
     </notification>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Vue from  'vue'
 import Notification from './notification.vue'
 
@@ -13,21 +14,11 @@ export default Vue.extend({
   components: {
     notification: Notification
   },
-  data () {
-    return {
-      notifications: NotificationStore.state
-    }
-  },
-	computed () {
-		notifications () {
-			return this.$store.getters.ketchupNotifications
-		}
-	},
-  methods: {
-    removeNotification: function (notification) {
-      NotificationStore.removeNotification(notification)
-    }
-  }
+	computed: {
+    ...mapGetters({
+       notifications: 'ketchupNotifications'
+     })
+	}
 })
 </script>
 
