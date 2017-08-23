@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Vue from  'vue'
 import Notification from './notification.vue'
 
@@ -14,9 +15,9 @@ export default Vue.extend({
     notification: Notification
   },
 	computed: {
-		notifications () {
-			return this.$store.getters.ketchupNotifications
-		}
+    ...mapGetters({
+       notifications: 'ketchupNotifications'
+     })
 	}
 })
 </script>
