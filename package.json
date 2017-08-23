@@ -1,10 +1,10 @@
 {
   "name": "ketchup-notifications",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Vuex based notifications library for Vue2",
   "main": "./dist/bundle.js",
   "scripts": {
-    "prepublish": "npm webpack",
+    "prepublish": "npm run webpack",
     "dev": "node ./src/test.js",
     "webpack": "webpack",
     "test": "mocha --reporter spec"
